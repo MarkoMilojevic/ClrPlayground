@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleConsoleApp", "SimpleConsoleApp\SimpleConsoleApp.csproj", "{2CB9FBF0-3A76-42A0-91C2-D94AF7F39BBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{4DD795DD-2C65-4D53-A706-3C9A40E3EB58}"
+	ProjectSection(SolutionItems) = preProject
+		init-variables.bat = init-variables.bat
+		multi-file-assembly.bat = multi-file-assembly.bat
+		simple-console-app.bat = simple-console-app.bat
+		simple-lib.bat = simple-lib.bat
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLib", "SimpleLib\SimpleLib.csproj", "{E02ECF4B-8482-4492-9927-218EAA9737E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MultiFileAssembly", "MultiFileAssembly", "{88B7BC31-4EB4-428A-9656-DD099F5C3816}"
+	ProjectSection(SolutionItems) = preProject
+		MultiFileAssembly\Properties\AssemblyInfo.cs = MultiFileAssembly\Properties\AssemblyInfo.cs
+		MultiFileAssembly\PartOne.cs = MultiFileAssembly\PartOne.cs
+		MultiFileAssembly\PartThree.cs = MultiFileAssembly\PartThree.cs
+		MultiFileAssembly\PartTwo.cs = MultiFileAssembly\PartTwo.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CB9FBF0-3A76-42A0-91C2-D94AF7F39BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB9FBF0-3A76-42A0-91C2-D94AF7F39BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB9FBF0-3A76-42A0-91C2-D94AF7F39BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB9FBF0-3A76-42A0-91C2-D94AF7F39BBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E02ECF4B-8482-4492-9927-218EAA9737E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E02ECF4B-8482-4492-9927-218EAA9737E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E02ECF4B-8482-4492-9927-218EAA9737E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E02ECF4B-8482-4492-9927-218EAA9737E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3087B14A-9D3F-430E-AFA0-9D195052FDBF}
+	EndGlobalSection
+EndGlobal
