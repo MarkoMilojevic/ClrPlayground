@@ -12,12 +12,14 @@ if not "%1" == "" set OutDir=%1
 if "%1" == "" set OutDir=%ProjectDir%\bin\Debug
 
 call .\multi-file-assembly.bat %OutDir%
+call .\strongly-named-assembly.bat %OutDir%
 
 %RoslynDir%\csc.exe ^
 /t:exe ^
 /debug:full ^
 /r:%OutDir%\MultiFileAssembly.dll ^
 /r:%OutDir%\SimpleLib.dll ^
+/r:%OutDir%\StronglyNamedAssembly.dll ^
 /out:%OutDir%\SimpleConsoleApp.exe ^
 %ProjectDir%\Properties\AssemblyInfo.cs ^
 %ProjectDir%\Program.cs ^

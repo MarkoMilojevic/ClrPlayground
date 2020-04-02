@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2CB9FBF0-3A76-42A0-91C2-D94AF7F39BBE}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>SimpleConsoleApp</RootNamespace>
-    <AssemblyName>SimpleConsoleApp</AssemblyName>
+    <ProjectGuid>{33F3C107-6AF3-4884-BACB-2DB949BDEFF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StronglyNamedAssembly</RootNamespace>
+    <AssemblyName>StronglyNamedAssembly</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MultiFileAssembly">
-      <HintPath>..\MultiFileAssembly\bin\Debug\MultiFileAssembly.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,23 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="StronglyNamedType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleInternalType.cs" />
-    <Compile Include="SimplePublicType.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SimpleLib\SimpleLib.csproj">
-      <Project>{e02ecf4b-8482-4492-9927-218eaa9737e5}</Project>
-      <Name>SimpleLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StronglyNamedAssembly\StronglyNamedAssembly.csproj">
-      <Project>{33f3c107-6af3-4884-bacb-2db949bdeff3}</Project>
-      <Name>StronglyNamedAssembly</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

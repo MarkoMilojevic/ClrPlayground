@@ -1,4 +1,5 @@
 ﻿using MultiFileAssembly;
+using StronglyNamedAssembly;
 
 namespace SimpleConsoleApp
 {
@@ -22,6 +23,8 @@ namespace SimpleConsoleApp
 
             new PartOne().Hi();
             new PartTwo().Hi();
+
+            StronglyNamedType.StrongHi();
         }
     }
 }
