@@ -47,11 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StronglyNamedType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="keyfile\keypair.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StronglyNamedTypeNewHost\StronglyNamedTypeNewHost.csproj">
+      <Project>{6dad0181-9cf1-4aad-8b0b-4a1bfaa9787e}</Project>
+      <Name>StronglyNamedTypeNewHost</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
