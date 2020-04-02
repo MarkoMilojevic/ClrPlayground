@@ -1,10 +1,17 @@
 ﻿using MultiFileAssembly;
 using StronglyNamedAssembly;
+using System;
 
 namespace SimpleConsoleApp
 {
     public static class Program
     {
+        static Program()
+        {
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            currentDomain.AssemblyLoad += new AssemblyLoadEventHandler(MyAssemblyLoadEventHandler);
+        }
+
         public static void Main(string[] args)
         {
             SimplePublicType simplePublicType = new SimplePublicType();
@@ -24,7 +31,13 @@ namespace SimpleConsoleApp
             new PartOne().Hi();
             new PartTwo().Hi();
 
-            new StronglyNamedType().StrongHi();
+            StrongHi();
         }
+
+        private static void MyAssemblyLoadEventHandler(object sender, AssemblyLoadEventArgs args) =>
+            Console.WriteLine($"Assembly loaded: {args.LoadedAssembly.FullName}, Sender: {sender}");
+
+        private static void StrongHi() =>
+            new StronglyNamedType().StrongHi();
     }
 }
