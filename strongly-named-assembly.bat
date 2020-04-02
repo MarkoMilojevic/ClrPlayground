@@ -14,6 +14,7 @@ if not exist %ProjectDir%\bin\Debug md %ProjectDir%\bin\Debug
 if not "%1" == "" set OutDir=%1
 if "%1" == "" set OutDir=%ProjectDir%\bin\Debug
 
+@echo "Compiling StronglyNamedAssembly.dll"
 %RoslynDir%\csc.exe ^
 /t:library ^
 /debug:full ^

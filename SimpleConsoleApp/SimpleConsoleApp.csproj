@@ -36,6 +36,7 @@
     <Reference Include="MultiFileAssembly">
       <HintPath>..\MultiFileAssembly\bin\Debug\MultiFileAssembly.dll</HintPath>
     </Reference>
+    <Reference Include="StronglyNamedAssembly" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,10 +59,6 @@
     <ProjectReference Include="..\SimpleLib\SimpleLib.csproj">
       <Project>{e02ecf4b-8482-4492-9927-218eaa9737e5}</Project>
       <Name>SimpleLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StronglyNamedAssembly\StronglyNamedAssembly.csproj">
-      <Project>{33f3c107-6af3-4884-bacb-2db949bdeff3}</Project>
-      <Name>StronglyNamedAssembly</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

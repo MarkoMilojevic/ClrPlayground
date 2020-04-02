@@ -13,6 +13,7 @@ if "%1" == "" set OutDir=%ProjectDir%\bin\Debug
 
 call .\simple-lib.bat %OutDir%
 
+@echo "Compiling PartOne.netmodule"
 %RoslynDir%\csc.exe ^
 /t:module ^
 /debug:full ^
@@ -20,6 +21,7 @@ call .\simple-lib.bat %OutDir%
 /out:%OutDir%\PartOne.netmodule ^
 %ProjectDir%\PartOne.cs
 
+@echo "Compiling PartTwo.netmodule"
 %RoslynDir%\csc.exe ^
 /t:module ^
 /debug:full ^
@@ -27,6 +29,7 @@ call .\simple-lib.bat %OutDir%
 /out:%OutDir%\PartTwo.netmodule ^
 %ProjectDir%\PartTwo.cs
 
+@echo "Compiling PartThree.netmodule"
 %RoslynDir%\csc.exe ^
 /t:module ^
 /debug:full ^
@@ -34,6 +37,7 @@ call .\simple-lib.bat %OutDir%
 /out:%OutDir%\PartThree.netmodule ^
 %ProjectDir%\PartThree.cs
 
+@echo "Compiling MultiFileAssembly.dll"
 %RoslynDir%\csc.exe ^
 /t:library ^
 /debug:full ^

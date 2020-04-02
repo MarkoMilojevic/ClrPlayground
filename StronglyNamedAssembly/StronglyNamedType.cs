@@ -2,9 +2,9 @@
 
 namespace StronglyNamedAssembly
 {
-    public static class StronglyNamedType
+    public class StronglyNamedType
     {
-        public static void StrongHi() =>
-            Console.WriteLine("Hi from strongly named assembly!");
+        public void StrongHi() =>
+            Console.WriteLine("Hi from GAC!");
     }
 }

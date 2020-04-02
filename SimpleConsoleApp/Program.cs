@@ -24,7 +24,7 @@ namespace SimpleConsoleApp
             new PartOne().Hi();
             new PartTwo().Hi();
 
-            StronglyNamedType.StrongHi();
+            new StronglyNamedType().StrongHi();
         }
     }
 }
