@@ -29,6 +29,8 @@ call .\strongly-named-assembly-2-0-0-0.bat
 %ProjectDir%\SimpleInternalType.cs ^
 %ProjectDir%\SimplePublicType.cs
 
+copy /Y %ProjectDir%\SimpleConsoleApp.exe.config %OutDir%
+
 del /q /f /s %OutDir%\StronglyNamedAssembly.dll > NUL
 del /q /f /s %OutDir%\StronglyNamedAssembly.pdb > NUL
 

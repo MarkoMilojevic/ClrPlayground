@@ -25,4 +25,18 @@ rem install dll into GAC
 @echo "Installing StronglyNamedAssembly.dll 1.0.0.0 into GAC"
 call %NetFxToolsDir%\gacutil /i %OutDir%\StronglyNamedAssembly.dll /f
 
+@echo "Compiling Policy.1.0.StronglyNamedAssembly.dll"
+
+copy /Y %ProjectDir%\StronglyNamedAssembly.config %OutDir%
+
+%NetFxToolsDir%\al.exe ^
+/out:%OutDir%\Policy.1.0.StronglyNamedAssembly.dll ^
+/version:1.0.0.0 ^
+/keyfile:.\StronglyNamedAssembly\keyfile\keypair.snk ^
+/linkresource:%OutDir%\StronglyNamedAssembly.config
+
+rem install dll into GAC
+@echo "Installing Policy.1.0.StronglyNamedAssembly.dll into GAC"
+call %NetFxToolsDir%\gacutil /i %OutDir%\Policy.1.0.StronglyNamedAssembly.dll /f
+
 endlocal
