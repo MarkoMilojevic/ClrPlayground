@@ -15,6 +15,7 @@ if not "%1" == "" set OutDir=%1
 if "%1" == "" set OutDir=%ProjectDir%\bin\Debug
 
 @echo "Compiling StronglyNamedTypeNewHost.dll"
+
 %RoslynDir%\csc.exe ^
 /t:library ^
 /debug:full ^

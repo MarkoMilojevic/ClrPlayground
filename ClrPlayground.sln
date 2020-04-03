@@ -11,7 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{4DD7
 		multi-file-assembly.bat = multi-file-assembly.bat
 		simple-console-app.bat = simple-console-app.bat
 		simple-lib.bat = simple-lib.bat
-		strongly-named-assembly.bat = strongly-named-assembly.bat
+		strongly-named-assembly-1-0-0-0.bat = strongly-named-assembly-1-0-0-0.bat
+		strongly-named-assembly-2-0-0-0.bat = strongly-named-assembly-2-0-0-0.bat
 		strongly-named-type-new-host.bat = strongly-named-type-new-host.bat
 	EndProjectSection
 EndProject
@@ -25,9 +26,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MultiFileAssembly", "MultiF
 		MultiFileAssembly\PartTwo.cs = MultiFileAssembly\PartTwo.cs
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StronglyNamedAssembly", "StronglyNamedAssembly\StronglyNamedAssembly.csproj", "{33F3C107-6AF3-4884-BACB-2DB949BDEFF3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StronglyNamedAssembly", "StronglyNamedAssembly\1.0.0.0\StronglyNamedAssembly.csproj", "{33F3C107-6AF3-4884-BACB-2DB949BDEFF3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StronglyNamedTypeNewHost", "StronglyNamedTypeNewHost\StronglyNamedTypeNewHost.csproj", "{6DAD0181-9CF1-4AAD-8B0B-4A1BFAA9787E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StronglyNamedAssembly", "StronglyNamedAssembly\2.0.0.0\StronglyNamedAssembly.csproj", "{3EED07B0-4D1C-4643-B28B-B9CD9E49EA2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +54,10 @@ Global
 		{6DAD0181-9CF1-4AAD-8B0B-4A1BFAA9787E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DAD0181-9CF1-4AAD-8B0B-4A1BFAA9787E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DAD0181-9CF1-4AAD-8B0B-4A1BFAA9787E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EED07B0-4D1C-4643-B28B-B9CD9E49EA2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EED07B0-4D1C-4643-B28B-B9CD9E49EA2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EED07B0-4D1C-4643-B28B-B9CD9E49EA2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EED07B0-4D1C-4643-B28B-B9CD9E49EA2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
