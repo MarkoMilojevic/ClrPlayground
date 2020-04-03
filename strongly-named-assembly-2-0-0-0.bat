@@ -6,9 +6,9 @@ setlocal
 
 set ProjectDir=.\StronglyNamedAssembly\2.0.0.0
 
-if not exist %ProjectDir%\bin\Debug md %ProjectDir%\bin\Debug
+if not exist %ProjectDir%\bin\Debug md %ProjectDir%\bin
 
-set OutDir=%ProjectDir%\bin\Debug
+set OutDir=%ProjectDir%\bin
 
 call .\strongly-named-type-new-host.bat %OutDir%
 
@@ -19,7 +19,7 @@ call .\strongly-named-type-new-host.bat %OutDir%
 /keyfile:.\StronglyNamedAssembly\keyfile\keypair.snk ^
 /r:%OutDir%\StronglyNamedTypeNewHost.dll ^
 /out:%OutDir%\StronglyNamedAssembly.dll ^
-%ProjectDir%\Properties\AssemblyInfo.cs
+%ProjectDir%\AssemblyInfo.cs
 
 rem install dll into GAC and delete local file
 @echo "Installing StronglyNamedTypeNewHost.dll into GAC"

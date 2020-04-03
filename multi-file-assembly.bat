@@ -6,10 +6,10 @@ setlocal
 
 set ProjectDir=.\MultiFileAssembly
 
-if not exist %ProjectDir%\bin\Debug md %ProjectDir%\bin\Debug
+if not exist %ProjectDir%\bin\Debug md %ProjectDir%\bin
 
 if not "%1" == "" set OutDir=%1
-if "%1" == "" set OutDir=%ProjectDir%\bin\Debug
+if "%1" == "" set OutDir=%ProjectDir%\bin
 
 call .\simple-lib.bat %OutDir%
 
@@ -49,6 +49,6 @@ call .\simple-lib.bat %OutDir%
 /addmodule:%OutDir%\PartTwo.netmodule ^
 /addmodule:%OutDir%\PartThree.netmodule ^
 /out:%OutDir%\MultiFileAssembly.dll ^
-%ProjectDir%\Properties\AssemblyInfo.cs
+%ProjectDir%\AssemblyInfo.cs
 
 endlocal

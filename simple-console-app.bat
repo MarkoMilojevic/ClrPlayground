@@ -6,10 +6,10 @@ setlocal
 
 set ProjectDir=.\SimpleConsoleApp
 
-if not exist %ProjectDir%\bin\Debug md %ProjectDir%\bin\Debug
+if not exist %ProjectDir%\bin\Debug md %ProjectDir%\bin
 
 if not "%1" == "" set OutDir=%1
-if "%1" == "" set OutDir=%ProjectDir%\bin\Debug
+if "%1" == "" set OutDir=%ProjectDir%\bin
 
 call .\multi-file-assembly.bat %OutDir%
 call .\strongly-named-assembly-1-0-0-0.bat %OutDir%
@@ -24,7 +24,7 @@ call .\strongly-named-assembly-2-0-0-0.bat
 /r:%OutDir%\SimpleLib.dll ^
 /r:%OutDir%\StronglyNamedAssembly.dll ^
 /out:%OutDir%\SimpleConsoleApp.exe ^
-%ProjectDir%\Properties\AssemblyInfo.cs ^
+%ProjectDir%\AssemblyInfo.cs ^
 %ProjectDir%\Program.cs ^
 %ProjectDir%\SimpleInternalType.cs ^
 %ProjectDir%\SimplePublicType.cs

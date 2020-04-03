@@ -9,10 +9,10 @@ set ProjectDir=.\StronglyNamedTypeNewHost
 if not exist %ProjectDir%\keyfile md %ProjectDir%\keyfile
 if not exist %ProjectDir%\keyfile\keypair.snk %NetFxToolsDir%\SN.exe -k %ProjectDir%\keyfile\keypair.snk
 
-if not exist %ProjectDir%\bin\Debug md %ProjectDir%\bin\Debug
+if not exist %ProjectDir%\bin\Debug md %ProjectDir%\bin
 
 if not "%1" == "" set OutDir=%1
-if "%1" == "" set OutDir=%ProjectDir%\bin\Debug
+if "%1" == "" set OutDir=%ProjectDir%\bin
 
 @echo "Compiling StronglyNamedTypeNewHost.dll"
 
@@ -21,7 +21,7 @@ if "%1" == "" set OutDir=%ProjectDir%\bin\Debug
 /debug:full ^
 /keyfile:%ProjectDir%\keyfile\keypair.snk ^
 /out:%OutDir%\StronglyNamedTypeNewHost.dll ^
-%ProjectDir%\Properties\AssemblyInfo.cs ^
+%ProjectDir%\AssemblyInfo.cs ^
 %ProjectDir%\StronglyNamedType.cs
 
 endlocal

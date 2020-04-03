@@ -6,10 +6,10 @@ setlocal
 
 set ProjectDir=.\StronglyNamedAssembly\1.0.0.0
 
-if not exist %ProjectDir%\bin\Debug md %ProjectDir%\bin\Debug
+if not exist %ProjectDir%\bin\Debug md %ProjectDir%\bin
 
 if not "%1" == "" set OutDir=%1
-if "%1" == "" set OutDir=%ProjectDir%\bin\Debug
+if "%1" == "" set OutDir=%ProjectDir%\bin
 
 @echo "Compiling StronglyNamedAssembly.dll 1.0.0.0"
 
@@ -18,7 +18,7 @@ if "%1" == "" set OutDir=%ProjectDir%\bin\Debug
 /debug:full ^
 /keyfile:.\StronglyNamedAssembly\keyfile\keypair.snk ^
 /out:%OutDir%\StronglyNamedAssembly.dll ^
-%ProjectDir%\Properties\AssemblyInfo.cs ^
+%ProjectDir%\AssemblyInfo.cs ^
 %ProjectDir%\StronglyNamedType.cs
 
 rem install dll into GAC
